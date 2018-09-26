@@ -1,1 +1,1 @@
-name : woohyuk yang, onidID : yangwo
+This is my assignment-1 submission! 
