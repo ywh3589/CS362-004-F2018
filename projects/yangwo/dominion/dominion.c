@@ -831,7 +831,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     case smithy:
       //smithy function stara
       
-      smithyAction(player, state, handPos, currentPlayer, trashFlag);
+      smithyAction(state, handPos, currentPlayer); 
       //+3 Cards
 		
     case village:
@@ -1325,8 +1325,10 @@ int updateCoins(int player, struct gameState *state, int bonus)
   return 0;
 }
 
-void smithyAction(int player, struct gameState *state, int handPos, int currentPlayer, int trashFlag){
-    
+void smithyAction(struct gameState *state, int handPos, int currentPlayer){
+   
+   int i = 0;
+
     for (i = 0; i < 3; i++)
 	{
 	  drawCard(currentPlayer, state);
