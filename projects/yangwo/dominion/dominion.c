@@ -667,7 +667,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card ) 
     {
     case adventurer:
-         return adventurerAction(state, temphand, &drawntreasure, &cardDrawn);
+         return adventurerAction(state);
 
     case council_room:
 	     council_roomAction(state, &handPos, &i);	
@@ -768,7 +768,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
         return remodelAction(state, choice1, choice2, handPos);
 		
     case smithy:
-       return smithyAction(state, handPos, &currentPlayer); 
+       return smithyAction(state, handPos, currentPlayer); 
 
     case village:
        return villageAction(state, handPos); 
@@ -1253,7 +1253,7 @@ int updateCoins(int player, struct gameState *state, int bonus)
   return 0;
 }
 
-int smithyAction(struct gameState *state, int handPos, int* currentPlayer)
+int smithyAction(struct gameState *state, int handPos, int currentPlayer)
 {
    
      int i = 0;
@@ -1269,12 +1269,12 @@ int smithyAction(struct gameState *state, int handPos, int* currentPlayer)
     return 0;
 }
 
-int adventurerAction(struct gameState *state, int temphand[], int *drawntreasure, int *cardDrawn)
+int adventurerAction(struct gameState *state)
 {
     int currentPlayer = whoseTurn(state);
-   // int cardDrawn = 0;
-   // int drawntreasure = 0;
-   // int temphand[MAX_HAND];
+    int cardDrawn = 0;
+    int drawntreasure = 0;
+    int temphand[MAX_HAND];
     int z = 0;   
     while(drawntreasure<2){
 	if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck

@@ -1,0 +1,94 @@
+        -:    0:Source:unittest2.c
+        -:    0:Graph:unittest2.gcno
+        -:    0:Data:unittest2.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/* -----------------------------------------------------------------------
+        -:    2: * Demonstration of how to write unit tests for dominion-base
+        -:    3: * Include the following lines in your makefile:
+        -:    4: *
+        -:    5: * unittest2: unittest2.c dominion.o rngs.o
+        -:    6: *      gcc -o unittest2 -g  unittest2.c dominion.o rngs.o $(CFLAGS)
+        -:    7: * -----------------------------------------------------------------------
+        -:    8: */
+        -:    9:
+        -:   10:#include "dominion.h"
+        -:   11:#include "dominion_helpers.h"
+        -:   12:#include <string.h>
+        -:   13:#include <stdio.h>
+        -:   14:#include <assert.h>
+        -:   15:#include "rngs.h"
+        -:   16:
+        -:   17:// set NOISY_TEST to 0 to remove printfs from output
+        -:   18:#define NOISY_TEST 1
+        -:   19:
+        -:   20:
+        1:   21:int main() {
+        -:   22:    int i;
+        1:   23:    int seed = 1000;
+        1:   24:    int numPlayer = 2;
+        1:   25:    int maxBonus = 10;
+        -:   26:    int p, r, handCount;
+        -:   27:    int bonus;
+        1:   28:    int k[10] = {adventurer, council_room, feast, gardens, mine
+        -:   29:               , remodel, smithy, village, baron, great_hall};
+        -:   30:    struct gameState G;
+        1:   31:    int maxHandCount = 5;
+        -:   32:
+        1:   33:    printf ("TESTING isGameOver():\n");
+        -:   34:
+        1:   35:                memset(&G, 23, sizeof(struct gameState));   // clear the game state
+        1:   36:                r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+        -:   37:
+        -:   38:                //test 1, when supplyCount[province] == 0, it should return 1
+        1:   39:                G.supplyCount[province] = 0;
+        1:   40:                int firstTestResul = isGameOver(&G);
+        -:   41:
+        1:   42:                r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+        -:   43:                
+        -:   44:                //test 2, when supplyCount[0], supplyCount[1], supplyCount[2] == 0, it should return 1
+        1:   45:                G.supplyCount[0] = G.supplyCount[1] = G.supplyCount[2] = 0;
+        1:   46:                int secondTestResul = isGameOver(&G);
+        -:   47:
+        1:   48:                r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+        -:   49:                
+        -:   50:                //test 3, when supplyCount[0], supplyCount[1] == 0, it should return 0
+        1:   51:                G.supplyCount[0] = G.supplyCount[1] = 0; 
+        1:   52:                int thirdTestResul = isGameOver(&G);
+        -:   53:
+        -:   54:
+        1:   55:                customAssert(firstTestResul, secondTestResul, thirdTestResul);
+        -:   56:
+        -:   57:
+        1:   58:    return 0;
+        -:   59:}
+        -:   60:
+        1:   61:int customAssert(int a, int b, int c){
+        -:   62:
+        1:   63:    if(a == 1)
+        -:   64:    {
+        1:   65:        if(b == 1)
+        -:   66:        {
+        1:   67:            if(c == 0)
+        -:   68:            {
+        1:   69:                 printf("All tests passed!\n");
+        -:   70:            }   
+        -:   71:            else
+        -:   72:            {
+    #####:   73:                printf("tests failed!\n");
+        -:   74:
+        -:   75:            }    
+        -:   76:        }
+        -:   77:        else
+        -:   78:        {
+    #####:   79:            printf("tests failed!\n");
+        -:   80:        }
+        -:   81:    
+        -:   82:    }
+        -:   83:    else
+        -:   84:    {
+    #####:   85:        printf("tests failed!\n");
+        -:   86:    }
+        -:   87:
+        1:   88:    return 0;
+        -:   89:}

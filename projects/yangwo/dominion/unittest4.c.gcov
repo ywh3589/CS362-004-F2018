@@ -1,0 +1,62 @@
+        -:    0:Source:unittest4.c
+        -:    0:Graph:unittest4.gcno
+        -:    0:Data:unittest4.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/* -----------------------------------------------------------------------
+        -:    2: * Demonstration of how to write unit tests for dominion-base
+        -:    3: * Include the following lines in your makefile:
+        -:    4: *
+        -:    5: * unittest4 : unittest4.c dominion.o rngs.o
+        -:    6: *      gcc -o unittest4 -g  unittest4.c dominion.o rngs.o $(CFLAGS)
+        -:    7: * -----------------------------------------------------------------------
+        -:    8: */
+        -:    9:
+        -:   10:#include "dominion.h"
+        -:   11:#include "dominion_helpers.h"
+        -:   12:#include <string.h>
+        -:   13:#include <stdio.h>
+        -:   14:#include <assert.h>
+        -:   15:#include "rngs.h"
+        -:   16:
+        -:   17:// set NOISY_TEST to 0 to remove printfs from output
+        -:   18:#define NOISY_TEST 1
+        -:   19:
+        1:   20:int main() {
+        -:   21:    int i, r, currenPlayer, result;
+        1:   22:    int seed = 1000;
+        1:   23:    int numPlayer = 2;
+        1:   24:    int k[10] = {adventurer, council_room, feast, gardens, mine
+        -:   25:               , remodel, smithy, village, baron, great_hall};
+        -:   26:    struct gameState G;
+        -:   27:    
+        1:   28:    printf ("TESTING numHandCards():\n");
+        -:   29:
+        1:   30:    memset(&G, 23, sizeof(struct gameState));   // clear the game state
+        -:   31:    
+        1:   32:    currenPlayer = 0;
+        -:   33:
+        -:   34:    //Test 1: result should be "5" because in initializeGame() function, user drawCards() five times.
+        -:   35:    
+        1:   36:    r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+        1:   37:    result = numHandCards(&G);
+        -:   38:
+        1:   39:    customAssert(result);
+        -:   40:
+        1:   41:    return 0;
+        -:   42: 
+        -:   43:}
+        -:   44:
+        1:   45:void customAssert(int a){
+        -:   46:
+        -:   47:    //it is already know that when player starts game, they get 5 cards in hands
+        -:   48:    //(from initializeGame() function, user drawCards() five times)
+        1:   49:    if(a == 5)
+        -:   50:    {
+        1:   51:        printf("test passed!\n");
+        -:   52:    }
+        -:   53:    else
+        -:   54:    {
+    #####:   55:        printf("test failed\n");
+        -:   56:    }
+        1:   57:}

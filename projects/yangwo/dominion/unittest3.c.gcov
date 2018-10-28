@@ -1,0 +1,77 @@
+        -:    0:Source:unittest3.c
+        -:    0:Graph:unittest3.gcno
+        -:    0:Data:unittest3.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/* -----------------------------------------------------------------------
+        -:    2: * Demonstration of how to write unit tests for dominion-base
+        -:    3: * Include the following lines in your makefile:
+        -:    4: *
+        -:    5: * unittest3 : unittest3.c dominion.o rngs.o
+        -:    6: *      gcc -o unittest3 -g  unittest3.c dominion.o rngs.o $(CFLAGS)
+        -:    7: * -----------------------------------------------------------------------
+        -:    8: */
+        -:    9:
+        -:   10:#include "dominion.h"
+        -:   11:#include "dominion_helpers.h"
+        -:   12:#include <string.h>
+        -:   13:#include <stdio.h>
+        -:   14:#include <assert.h>
+        -:   15:#include "rngs.h"
+        -:   16:
+        -:   17:// set NOISY_TEST to 0 to remove printfs from output
+        -:   18:#define NOISY_TEST 1
+        -:   19:
+        -:   20:void customAssert(int *cmpArr);
+        -:   21:
+        1:   22:int main() {
+        -:   23:    int i, r, currenPlayer, result, card;
+        1:   24:    int seed = 1000;
+        1:   25:    int numPlayer = 2;
+        1:   26:    int k[10] = {adventurer, council_room, feast, gardens, mine
+        -:   27:               , remodel, smithy, village, baron, great_hall};
+        -:   28:    struct gameState G;
+        -:   29:    int costArr[27];
+        -:   30:    
+        1:   31:    printf ("TESTING getCost():\n");
+        -:   32:
+        1:   33:    memset(&G, 23, sizeof(struct gameState));   // clear the game state
+        1:   34:    memset(costArr, 0, sizeof(costArr));
+        -:   35:
+        1:   36:    currenPlayer = 0;
+        -:   37:
+        -:   38:    //Test : storing cost which getCost() function returns into costArr 
+        -:   39:    //       and compare costArr with stdArr in customAssert() function 
+        -:   40:
+        1:   41:    r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+        -:   42:    
+        -:   43:
+       28:   44:    for(card = 0 ; card < 27; card++)
+        -:   45:    {
+       27:   46:        result = getCost(card);
+        -:   47:        
+       27:   48:        costArr[card] = result;
+        -:   49:    }
+        -:   50:
+        1:   51:    customAssert(costArr);
+        -:   52:
+        1:   53:    return 0;
+        -:   54: 
+        -:   55:}
+        -:   56:
+        1:   57:void customAssert(int *cmpArr){
+        -:   58:
+        -:   59:    //it is already know that each card has its own cost, so stdArr is array of costs for each card.
+        -:   60:    //for example, copper's cardnumber is 4 and cost is 0, so stdArr[4] should be 0.
+        -:   61:    
+        1:   62:    int stdArr[27] = {0, 2, 5, 8, 0, 3, 6, 6, 5, 4, 4, 5, 4, 4, 3, 4, 3, 5, 3, 5, 3, 4, 2, 5, 4, 4, 4};
+        -:   63:
+        1:   64:    if(memcmp(stdArr, cmpArr, sizeof(stdArr)) == 0)
+        -:   65:    {
+        1:   66:        printf("test passed!\n");
+        -:   67:    }
+        -:   68:    else
+        -:   69:    {
+    #####:   70:        printf("test failed\n");
+        -:   71:    }
+        1:   72:}

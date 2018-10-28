@@ -1,0 +1,80 @@
+        -:    0:Source:unittest1.c
+        -:    0:Graph:unittest1.gcno
+        -:    0:Data:unittest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/* -----------------------------------------------------------------------
+        -:    2: * Demonstration of how to write unit tests for dominion-base
+        -:    3: * Include the following lines in your makefile:
+        -:    4: *
+        -:    5: * unittest1: unittest1.c dominion.o rngs.o
+        -:    6: *      gcc -o unittest1 -g  unittest1.c dominion.o rngs.o $(CFLAGS)
+        -:    7: * -----------------------------------------------------------------------
+        -:    8: */
+        -:    9:
+        -:   10:#include "dominion.h"
+        -:   11:#include "dominion_helpers.h"
+        -:   12:#include <string.h>
+        -:   13:#include <stdio.h>
+        -:   14:#include <assert.h>
+        -:   15:#include "rngs.h"
+        -:   16:
+        -:   17:// set NOISY_TEST to 0 to remove printfs from output
+        -:   18:#define NOISY_TEST 1
+        -:   19:
+        1:   20:int main() {
+        -:   21:    
+        -:   22:    int card, r;
+        1:   23:    int seed = 1000;
+        1:   24:    int numPlayer = 2;
+        1:   25:    int k[10] = {adventurer, council_room, feast, gardens, mine
+        -:   26:               , remodel, smithy, village, baron, great_hall};
+        1:   27:    int resCmpArray[2] = {0, 0};
+        1:   28:    int temp = 0;
+        -:   29:    struct gameState G;
+        1:   30:    int currentPlayer = 0;
+        -:   31:
+        -:   32:    
+        1:   33:    printf ("TESTING fullDeckCount():\n");
+        -:   34:
+        1:   35:    memset(&G, 23, sizeof(struct gameState));   // clear the game state
+        1:   36:    r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+        -:   37:             
+        -:   38:    //testing all cards from 0(estate) to 26(treasure_map)
+       28:   39:    for(card = 0; card < 27; card++)
+        -:   40:    {
+       27:   41:        int result = 0;
+       27:   42:        result = fullDeckCount(currentPlayer, card, &G);
+       27:   43:        if(result != 0)
+        -:   44:        {
+        2:   45:            if(temp >=2)
+        -:   46:            {
+    #####:   47:                printf("test failed!\n");
+    #####:   48:                exit(1);                                
+        -:   49:            }
+        -:   50:            
+        2:   51:            resCmpArray[temp] = card;
+        2:   52:            temp++;
+        -:   53:        }                   
+        -:   54:    }
+        -:   55:
+        1:   56:    customAssert(resCmpArray);
+        -:   57:
+    #####:   58:    return 0;
+        -:   59:}
+        -:   60:
+        1:   61:void customAssert(int *cmpArray) {
+        -:   62:
+        1:   63:    int stdArray[2] = {1, 4};
+        -:   64:
+        1:   65:    if(memcmp(stdArray, cmpArray, sizeof(stdArray)) == 0)
+        -:   66:    {
+        1:   67:        printf("all tests passed!\n");
+        -:   68:    }     
+        -:   69:    else
+        -:   70:    {
+    #####:   71:        printf("test failed!\n");
+        -:   72:    }
+        -:   73:         
+        1:   74:     exit(0);
+        -:   75:}
