@@ -1,0 +1,465 @@
+Result for running random tests of dominion adventure card: 
+randomtestadventurer.c:
+Testing adventurer card.
+RANDOM TESTS.
+deck count 0, discard count 2, handCount 8
+
+Before calling cardEffect function
+hand count = 8
+showing hand contents 
+[1]th = 3
+[2]th = 3
+[3]th = 1
+[4]th = 5
+[5]th = 1
+[6]th = 1
+[7]th = 4
+[8]th = 5
+deck count = 0
+showing deck contents 
+discard count = 2
+showing discard contents 
+[1]th = 4
+[2]th = 6
+
+After calling cardEffect function
+
+
+TestG
+hand count = 10
+showing hand contents 
+[1]th = 3
+[2]th = 3
+[3]th = 1
+[4]th = 5
+[5]th = 1
+[6]th = 1
+[7]th = 4
+[8]th = 5
+[9]th = 6
+[10]th = 4
+deck count = 0
+showing deck contents 
+discard count = 0
+showing discard contents 
+
+G
+hand count = 10
+showing hand contents 
+[1]th = 3
+[2]th = 3
+[3]th = 1
+[4]th = 5
+[5]th = 1
+[6]th = 1
+[7]th = 4
+[8]th = 5
+[9]th = 4
+[10]th = 6
+deck count = 0
+showing deck contents 
+discard count = 0
+showing discard contents 
+test success
+deck count 9, discard count 1, handCount 8
+
+Before calling cardEffect function
+hand count = 8
+showing hand contents 
+[1]th = 5
+[2]th = 1
+[3]th = 6
+[4]th = 3
+[5]th = 1
+[6]th = 2
+[7]th = 0
+[8]th = 4
+deck count = 9
+showing deck contents 
+[1]th = 6
+[2]th = 1
+[3]th = 4
+[4]th = 6
+[5]th = 4
+[6]th = 6
+[7]th = 3
+[8]th = 4
+[9]th = 5
+discard count = 1
+showing discard contents 
+[1]th = 6
+
+After calling cardEffect function
+
+
+TestG
+hand count = 10
+showing hand contents 
+[1]th = 5
+[2]th = 1
+[3]th = 6
+[4]th = 3
+[5]th = 1
+[6]th = 2
+[7]th = 0
+[8]th = 4
+[9]th = 5
+[10]th = 4
+deck count = 7
+showing deck contents 
+[1]th = 6
+[2]th = 1
+[3]th = 4
+[4]th = 6
+[5]th = 4
+[6]th = 6
+[7]th = 3
+discard count = 1
+showing discard contents 
+[1]th = 6
+
+G
+hand count = 15
+showing hand contents 
+[1]th = 5
+[2]th = 1
+[3]th = 6
+[4]th = 3
+[5]th = 1
+[6]th = 2
+[7]th = 0
+[8]th = 4
+[9]th = 5
+[10]th = 4
+[11]th = 6
+[12]th = 4
+[13]th = 6
+[14]th = 4
+[15]th = 6
+deck count = 1
+showing deck contents 
+[1]th = -1
+discard count = 2
+showing discard contents 
+[1]th = -1
+[2]th = -1
+test success
+deck count 1, discard count 9, handCount 9
+
+Before calling cardEffect function
+hand count = 9
+showing hand contents 
+[1]th = 0
+[2]th = 1
+[3]th = 0
+[4]th = 0
+[5]th = 0
+[6]th = 4
+[7]th = 0
+[8]th = 6
+[9]th = 6
+deck count = 1
+showing deck contents 
+[1]th = 4
+discard count = 9
+showing discard contents 
+[1]th = 1
+[2]th = 1
+[3]th = 1
+[4]th = 0
+[5]th = 5
+[6]th = 1
+[7]th = 0
+[8]th = 4
+[9]th = 0
+
+After calling cardEffect function
+
+
+TestG
+hand count = 11
+showing hand contents 
+[1]th = 0
+[2]th = 1
+[3]th = 0
+[4]th = 0
+[5]th = 0
+[6]th = 4
+[7]th = 0
+[8]th = 6
+[9]th = 6
+[10]th = 4
+[11]th = 5
+deck count = 3
+showing deck contents 
+[1]th = 0
+[2]th = 4
+[3]th = 1
+discard count = 5
+showing discard contents 
+[1]th = 1
+[2]th = 1
+[3]th = 0
+[4]th = 0
+[5]th = 1
+
+G
+hand count = 12
+showing hand contents 
+[1]th = 0
+[2]th = 1
+[3]th = 0
+[4]th = 0
+[5]th = 0
+[6]th = 4
+[7]th = 0
+[8]th = 6
+[9]th = 6
+[10]th = 4
+[11]th = 5
+[12]th = 4
+deck count = 0
+showing deck contents 
+discard count = 7
+showing discard contents 
+[1]th = -1
+[2]th = -1
+[3]th = -1
+[4]th = -1
+[5]th = -1
+[6]th = -1
+[7]th = -1
+test success
+deck count 3, discard count 4, handCount 3
+
+Before calling cardEffect function
+hand count = 3
+showing hand contents 
+[1]th = 1
+[2]th = 3
+[3]th = 1
+deck count = 3
+showing deck contents 
+[1]th = 3
+[2]th = 4
+[3]th = 5
+discard count = 4
+showing discard contents 
+[1]th = 5
+[2]th = 2
+[3]th = 6
+[4]th = 0
+
+After calling cardEffect function
+
+
+TestG
+hand count = 5
+showing hand contents 
+[1]th = 1
+[2]th = 3
+[3]th = 1
+[4]th = 5
+[5]th = 4
+deck count = 1
+showing deck contents 
+[1]th = 3
+discard count = 4
+showing discard contents 
+[1]th = 5
+[2]th = 2
+[3]th = 6
+[4]th = 0
+
+G
+hand count = 7
+showing hand contents 
+[1]th = 1
+[2]th = 3
+[3]th = 1
+[4]th = 5
+[5]th = 4
+[6]th = 5
+[7]th = 6
+deck count = 0
+showing deck contents 
+discard count = 3
+showing discard contents 
+[1]th = -1
+[2]th = -1
+[3]th = -1
+test success
+deck count 5, discard count 8, handCount 7
+
+Before calling cardEffect function
+hand count = 7
+showing hand contents 
+[1]th = 6
+[2]th = 5
+[3]th = 5
+[4]th = 0
+[5]th = 3
+[6]th = 4
+[7]th = 0
+deck count = 5
+showing deck contents 
+[1]th = 2
+[2]th = 4
+[3]th = 1
+[4]th = 5
+[5]th = 4
+discard count = 8
+showing discard contents 
+[1]th = 0
+[2]th = 0
+[3]th = 1
+[4]th = 6
+[5]th = 4
+[6]th = 6
+[7]th = 1
+[8]th = 0
+
+After calling cardEffect function
+
+
+TestG
+hand count = 9
+showing hand contents 
+[1]th = 6
+[2]th = 5
+[3]th = 5
+[4]th = 0
+[5]th = 3
+[6]th = 4
+[7]th = 0
+[8]th = 4
+[9]th = 5
+deck count = 3
+showing deck contents 
+[1]th = 2
+[2]th = 4
+[3]th = 1
+discard count = 8
+showing discard contents 
+[1]th = 0
+[2]th = 0
+[3]th = 1
+[4]th = 6
+[5]th = 4
+[6]th = 6
+[7]th = 1
+[8]th = 0
+
+G
+hand count = 13
+showing hand contents 
+[1]th = 6
+[2]th = 5
+[3]th = 5
+[4]th = 0
+[5]th = 3
+[6]th = 4
+[7]th = 0
+[8]th = 4
+[9]th = 5
+[10]th = 4
+[11]th = 6
+[12]th = 6
+[13]th = 4
+deck count = 5
+showing deck contents 
+[1]th = -1
+[2]th = -1
+[3]th = -1
+[4]th = -1
+[5]th = -1
+discard count = 2
+showing discard contents 
+[1]th = -1
+[2]th = -1
+test success
+Function 'remodelAction'
+Lines executed:0.00% of 12
+
+Function 'villageAction'
+Lines executed:0.00% of 6
+
+Function 'council_roomAction'
+Lines executed:0.00% of 10
+
+Function 'adventurerAction'
+Lines executed:100.00% of 19
+
+Function 'smithyAction'
+Lines executed:0.00% of 6
+
+Function 'updateCoins'
+Lines executed:81.82% of 11
+
+Function 'gainCard'
+Lines executed:0.00% of 13
+
+Function 'discardCard'
+Lines executed:0.00% of 13
+
+Function 'cardEffect'
+Lines executed:4.46% of 202
+
+Function 'getCost'
+Lines executed:0.00% of 30
+
+Function 'drawCard'
+Lines executed:100.00% of 22
+
+Function 'getWinners'
+Lines executed:0.00% of 24
+
+Function 'scoreFor'
+Lines executed:0.00% of 24
+
+Function 'isGameOver'
+Lines executed:0.00% of 10
+
+Function 'endTurn'
+Lines executed:0.00% of 20
+
+Function 'whoseTurn'
+Lines executed:100.00% of 2
+
+Function 'fullDeckCount'
+Lines executed:0.00% of 9
+
+Function 'supplyCount'
+Lines executed:0.00% of 2
+
+Function 'handCard'
+Lines executed:0.00% of 3
+
+Function 'numHandCards'
+Lines executed:0.00% of 2
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+
+Function 'playCard'
+Lines executed:0.00% of 14
+
+Function 'shuffle'
+Lines executed:100.00% of 16
+
+Function 'initializeGame'
+Lines executed:83.87% of 62
+
+Function 'kingdomCards'
+Lines executed:0.00% of 13
+
+Function 'newGame'
+Lines executed:0.00% of 3
+
+Function 'compare'
+Lines executed:100.00% of 6
+
+File 'dominion.c'
+Lines executed:23.81% of 567
+Creating 'dominion.c.gcov'
+
