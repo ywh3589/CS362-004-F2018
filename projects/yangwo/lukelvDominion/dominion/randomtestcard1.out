@@ -1,0 +1,153 @@
+Result for running random tests of dominion village card: 
+randomtestcard1.c:
+before initializeGame G's hand count = 0
+before initializeGame G's deck count = 0
+before initializeGame G's discard count = 0
+Testing village card.
+RANDOM TESTS.
+deck count 0, discard count 2, handCount 8
+handpos 3
+after deck count 0, discard count 2, handCount 8
+after calling function deck count 0, discard count 2, handCount 8
+hand count = 8, expected = 8
+deck count = 1, expected = 1
+coins = 4, expected = 4
+actions = 3, expected = 3
+test success
+test success
+test success
+test success
+deck count 6, discard count 9, handCount 1
+handpos 0
+after deck count 6, discard count 9, handCount 1
+after calling function deck count 6, discard count 9, handCount 1
+hand count = 1, expected = 1
+deck count = 5, expected = 5
+coins = 4, expected = 4
+actions = 3, expected = 3
+test success
+test success
+test success
+test success
+deck count 0, discard count 6, handCount 7
+handpos 5
+after deck count 0, discard count 6, handCount 7
+after calling function deck count 0, discard count 6, handCount 7
+hand count = 7, expected = 7
+deck count = 5, expected = 5
+coins = 4, expected = 4
+actions = 3, expected = 3
+test success
+test success
+test success
+test success
+deck count 9, discard count 7, handCount 4
+handpos 2
+after deck count 9, discard count 7, handCount 4
+after calling function deck count 9, discard count 7, handCount 4
+hand count = 4, expected = 4
+deck count = 8, expected = 8
+coins = 4, expected = 4
+actions = 3, expected = 3
+test success
+test success
+test success
+test success
+deck count 6, discard count 8, handCount 0
+handpos 0
+after deck count 6, discard count 8, handCount 0
+after calling function deck count 6, discard count 8, handCount 0
+hand count = 0, expected = 0
+deck count = 5, expected = 5
+coins = 4, expected = 4
+actions = 3, expected = 3
+test success
+test success
+test success
+test success
+ALL TESTS OK
+Function 'updateCoins'
+Lines executed:81.82% of 11
+
+Function 'gainCard'
+Lines executed:0.00% of 13
+
+Function 'discardCard'
+Lines executed:92.31% of 13
+
+Function 'cardEffect'
+Lines executed:5.80% of 207
+
+Function 'great_hallEffect'
+Lines executed:100.00% of 5
+
+Function 'villageEffect'
+Lines executed:100.00% of 6
+
+Function 'council_roomEffect'
+Lines executed:0.00% of 9
+
+Function 'smithyEffect'
+Lines executed:100.00% of 5
+
+Function 'adventurerEffect'
+Lines executed:100.00% of 15
+
+Function 'getCost'
+Lines executed:96.67% of 30
+
+Function 'drawCard'
+Lines executed:100.00% of 22
+
+Function 'getWinners'
+Lines executed:0.00% of 24
+
+Function 'scoreFor'
+Lines executed:0.00% of 24
+
+Function 'isGameOver'
+Lines executed:100.00% of 10
+
+Function 'endTurn'
+Lines executed:0.00% of 20
+
+Function 'whoseTurn'
+Lines executed:100.00% of 2
+
+Function 'fullDeckCount'
+Lines executed:88.89% of 9
+
+Function 'supplyCount'
+Lines executed:0.00% of 2
+
+Function 'handCard'
+Lines executed:0.00% of 3
+
+Function 'numHandCards'
+Lines executed:100.00% of 2
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+
+Function 'playCard'
+Lines executed:0.00% of 14
+
+Function 'shuffle'
+Lines executed:100.00% of 16
+
+Function 'initializeGame'
+Lines executed:83.87% of 62
+
+Function 'kingdomCards'
+Lines executed:0.00% of 13
+
+Function 'newGame'
+Lines executed:0.00% of 3
+
+Function 'compare'
+Lines executed:100.00% of 6
+
+File 'dominion.c'
+Lines executed:37.75% of 559
+Creating 'dominion.c.gcov'
+

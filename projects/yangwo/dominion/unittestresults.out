@@ -2,30 +2,26 @@ Result for running unittests of dominion functions and cards:
 unittest1.c:
 TESTING fullDeckCount():
 all tests passed!
-File 'unittest1.c'
-Lines executed:85.19% of 27
-Creating 'unittest1.c.gcov'
+File 'dominion.c'
+Lines executed:29.28% of 567
+Creating 'dominion.c.gcov'
 
 unittest2.c:
 TESTING isGameOver():
 All tests passed!
-File 'unittest2.c'
-Lines executed:89.29% of 28
-Creating 'unittest2.c.gcov'
+File 'dominion.c'
+Lines executed:31.04% of 567
+Creating 'dominion.c.gcov'
 
 unittest3.c:
 TESTING getCost():
 test passed!
-File 'unittest3.c'
-Lines executed:95.00% of 20
-Creating 'unittest3.c.gcov'
-
 unittest4.c:
 TESTING numHandCards():
 test passed!
-File 'unittest4.c'
-Lines executed:93.75% of 16
-Creating 'unittest4.c.gcov'
+File 'dominion.c'
+Lines executed:36.51% of 567
+Creating 'dominion.c.gcov'
 
 cardtest1.c:
 ----------------- Testing Card: smithy ----------------
@@ -36,9 +32,90 @@ coins = 4, expected = 4
 test success
 test success
 test success
-File 'cardtest1.c'
-Lines executed:96.55% of 29
-Creating 'cardtest1.c.gcov'
+Function 'remodelAction'
+Lines executed:0.00% of 12
+
+Function 'villageAction'
+Lines executed:100.00% of 6
+
+Function 'council_roomAction'
+Lines executed:0.00% of 10
+
+Function 'adventurerAction'
+Lines executed:100.00% of 19
+
+Function 'smithyAction'
+Lines executed:100.00% of 6
+
+Function 'updateCoins'
+Lines executed:81.82% of 11
+
+Function 'gainCard'
+Lines executed:0.00% of 13
+
+Function 'discardCard'
+Lines executed:92.31% of 13
+
+Function 'cardEffect'
+Lines executed:7.43% of 202
+
+Function 'getCost'
+Lines executed:96.67% of 30
+
+Function 'drawCard'
+Lines executed:100.00% of 22
+
+Function 'getWinners'
+Lines executed:0.00% of 24
+
+Function 'scoreFor'
+Lines executed:0.00% of 24
+
+Function 'isGameOver'
+Lines executed:100.00% of 10
+
+Function 'endTurn'
+Lines executed:0.00% of 20
+
+Function 'whoseTurn'
+Lines executed:100.00% of 2
+
+Function 'fullDeckCount'
+Lines executed:88.89% of 9
+
+Function 'supplyCount'
+Lines executed:0.00% of 2
+
+Function 'handCard'
+Lines executed:0.00% of 3
+
+Function 'numHandCards'
+Lines executed:100.00% of 2
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+
+Function 'playCard'
+Lines executed:0.00% of 14
+
+Function 'shuffle'
+Lines executed:100.00% of 16
+
+Function 'initializeGame'
+Lines executed:83.87% of 62
+
+Function 'kingdomCards'
+Lines executed:0.00% of 13
+
+Function 'newGame'
+Lines executed:0.00% of 3
+
+Function 'compare'
+Lines executed:100.00% of 6
+
+File 'dominion.c'
+Lines executed:37.74% of 567
+Creating 'dominion.c.gcov'
 
 cardtest2.c:
 ----------------- Testing Card: adventurer ----------------
@@ -57,7 +134,7 @@ showing deck contents
 [3]th = 4
 [4]th = 4
 [5]th = 4
-discard count = 1920843736
+discard count = 1342325640
 hand count = 7
 showing hand contents 
 [1]th = 4
@@ -72,14 +149,95 @@ showing deck contents
 [1]th = 1
 [2]th = 1
 [3]th = 4
-discard count = 1920843736
+discard count = 1342325640
 hand count = 7, expected = 6
 deck count = 3, expected = 3
 test failed
 test success
-File 'cardtest2.c'
-Lines executed:100.00% of 46
-Creating 'cardtest2.c.gcov'
+Function 'remodelAction'
+Lines executed:0.00% of 12
+
+Function 'villageAction'
+Lines executed:100.00% of 6
+
+Function 'council_roomAction'
+Lines executed:0.00% of 10
+
+Function 'adventurerAction'
+Lines executed:100.00% of 19
+
+Function 'smithyAction'
+Lines executed:100.00% of 6
+
+Function 'updateCoins'
+Lines executed:81.82% of 11
+
+Function 'gainCard'
+Lines executed:0.00% of 13
+
+Function 'discardCard'
+Lines executed:92.31% of 13
+
+Function 'cardEffect'
+Lines executed:7.43% of 202
+
+Function 'getCost'
+Lines executed:96.67% of 30
+
+Function 'drawCard'
+Lines executed:100.00% of 22
+
+Function 'getWinners'
+Lines executed:0.00% of 24
+
+Function 'scoreFor'
+Lines executed:0.00% of 24
+
+Function 'isGameOver'
+Lines executed:100.00% of 10
+
+Function 'endTurn'
+Lines executed:0.00% of 20
+
+Function 'whoseTurn'
+Lines executed:100.00% of 2
+
+Function 'fullDeckCount'
+Lines executed:88.89% of 9
+
+Function 'supplyCount'
+Lines executed:0.00% of 2
+
+Function 'handCard'
+Lines executed:0.00% of 3
+
+Function 'numHandCards'
+Lines executed:100.00% of 2
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+
+Function 'playCard'
+Lines executed:0.00% of 14
+
+Function 'shuffle'
+Lines executed:100.00% of 16
+
+Function 'initializeGame'
+Lines executed:83.87% of 62
+
+Function 'kingdomCards'
+Lines executed:0.00% of 13
+
+Function 'newGame'
+Lines executed:0.00% of 3
+
+Function 'compare'
+Lines executed:100.00% of 6
+
+File 'dominion.c'
+Lines executed:37.74% of 567
+Creating 'dominion.c.gcov'
 
 cardtest3.c:
 ----------------- Testing Card: village ----------------
@@ -92,9 +250,90 @@ test success
 test success
 test success
 test failed
-File 'cardtest3.c'
-Lines executed:100.00% of 33
-Creating 'cardtest3.c.gcov'
+Function 'remodelAction'
+Lines executed:0.00% of 12
+
+Function 'villageAction'
+Lines executed:100.00% of 6
+
+Function 'council_roomAction'
+Lines executed:0.00% of 10
+
+Function 'adventurerAction'
+Lines executed:100.00% of 19
+
+Function 'smithyAction'
+Lines executed:100.00% of 6
+
+Function 'updateCoins'
+Lines executed:81.82% of 11
+
+Function 'gainCard'
+Lines executed:0.00% of 13
+
+Function 'discardCard'
+Lines executed:92.31% of 13
+
+Function 'cardEffect'
+Lines executed:7.43% of 202
+
+Function 'getCost'
+Lines executed:96.67% of 30
+
+Function 'drawCard'
+Lines executed:100.00% of 22
+
+Function 'getWinners'
+Lines executed:0.00% of 24
+
+Function 'scoreFor'
+Lines executed:0.00% of 24
+
+Function 'isGameOver'
+Lines executed:100.00% of 10
+
+Function 'endTurn'
+Lines executed:0.00% of 20
+
+Function 'whoseTurn'
+Lines executed:100.00% of 2
+
+Function 'fullDeckCount'
+Lines executed:88.89% of 9
+
+Function 'supplyCount'
+Lines executed:0.00% of 2
+
+Function 'handCard'
+Lines executed:0.00% of 3
+
+Function 'numHandCards'
+Lines executed:100.00% of 2
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+
+Function 'playCard'
+Lines executed:0.00% of 14
+
+Function 'shuffle'
+Lines executed:100.00% of 16
+
+Function 'initializeGame'
+Lines executed:83.87% of 62
+
+Function 'kingdomCards'
+Lines executed:0.00% of 13
+
+Function 'newGame'
+Lines executed:0.00% of 3
+
+Function 'compare'
+Lines executed:100.00% of 6
+
+File 'dominion.c'
+Lines executed:37.74% of 567
+Creating 'dominion.c.gcov'
 
 cardtest4.c:
 ----------------- Testing Card: great_hall ----------------
@@ -107,7 +346,88 @@ test success
 test success
 test success
 test success
-File 'cardtest4.c'
-Lines executed:96.97% of 33
-Creating 'cardtest4.c.gcov'
+Function 'remodelAction'
+Lines executed:0.00% of 12
+
+Function 'villageAction'
+Lines executed:100.00% of 6
+
+Function 'council_roomAction'
+Lines executed:0.00% of 10
+
+Function 'adventurerAction'
+Lines executed:100.00% of 19
+
+Function 'smithyAction'
+Lines executed:100.00% of 6
+
+Function 'updateCoins'
+Lines executed:81.82% of 11
+
+Function 'gainCard'
+Lines executed:0.00% of 13
+
+Function 'discardCard'
+Lines executed:92.31% of 13
+
+Function 'cardEffect'
+Lines executed:7.43% of 202
+
+Function 'getCost'
+Lines executed:96.67% of 30
+
+Function 'drawCard'
+Lines executed:100.00% of 22
+
+Function 'getWinners'
+Lines executed:0.00% of 24
+
+Function 'scoreFor'
+Lines executed:0.00% of 24
+
+Function 'isGameOver'
+Lines executed:100.00% of 10
+
+Function 'endTurn'
+Lines executed:0.00% of 20
+
+Function 'whoseTurn'
+Lines executed:100.00% of 2
+
+Function 'fullDeckCount'
+Lines executed:88.89% of 9
+
+Function 'supplyCount'
+Lines executed:0.00% of 2
+
+Function 'handCard'
+Lines executed:0.00% of 3
+
+Function 'numHandCards'
+Lines executed:100.00% of 2
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+
+Function 'playCard'
+Lines executed:0.00% of 14
+
+Function 'shuffle'
+Lines executed:100.00% of 16
+
+Function 'initializeGame'
+Lines executed:83.87% of 62
+
+Function 'kingdomCards'
+Lines executed:0.00% of 13
+
+Function 'newGame'
+Lines executed:0.00% of 3
+
+Function 'compare'
+Lines executed:100.00% of 6
+
+File 'dominion.c'
+Lines executed:37.74% of 567
+Creating 'dominion.c.gcov'
 
